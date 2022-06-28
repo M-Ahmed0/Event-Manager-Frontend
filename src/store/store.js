@@ -45,7 +45,8 @@ const store = createStore({
                         localStorage.setItem('role', res.data.role);
                         commit('authenticateUser', {
                             token: res.data.token,
-                            username: res.data.username
+                            username: res.data.username,
+                            role: res.data.role
                         });
                         resolve();
                     })
